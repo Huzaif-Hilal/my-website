@@ -5,6 +5,10 @@ if(window.innerWidth < 800){
     }, 100)
 }
 
+if(window.innerWidth < 1000){
+    document.getElementById('info-text').style.fontSize = "16px"
+}
+
 // Adding Event Listners to every Nav Div
 let navs = Array.from(document.getElementsByClassName('main-nav'))
 navs.forEach((div, index) =>{   
@@ -50,13 +54,6 @@ navs.forEach((div, index) =>{
                 animate_contact_page()
                
 
-        }
-
-        if(navs[3].classList.contains('active')){
-            document.getElementById('home').style.display = "none";
-                document.getElementById('website').style.display = "none";
-                document.getElementById('contact').style.display = "none";
-                
         }
 
     })    
