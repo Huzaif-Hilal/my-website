@@ -1,0 +1,283 @@
+:root{
+    --Font-Fam-1: Nanum Pen Script;
+    --Font-Fam-2: Mate SC;
+    --Font-Fam-3: Titillium Web;
+    --Font-Fam-4: Kode Mono;
+    --C-Mint-Cream: #EBF5EE;
+    --C-Somky-Black: #130F02;
+    --C-White: #FFFFFC;
+    --C-Black: #000300;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 7fr;
+    grid-template-areas: 
+    "menu title"
+    "navigation webpreview";
+}
+
+body > div.menu, body > div.title, body > div.navigation, body > div.preview{
+    width: 100%;
+    height: 100%;
+}
+
+body > div.title {
+    grid-area: title;
+    color: var(--C-White);
+    background-color: var(--C-Somky-Black);
+    font-family: var(--Font-Fam-1);
+    text-align: center;
+    font-size: 48px;
+    text-decoration: wavy underline;
+    text-underline-offset: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+body > div.menu{
+    grid-area: menu;
+    background-color: var(--C-Black);
+    color: var(--C-Mint-Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    font-family: var(--Font-Fam-2);
+    text-decoration: dotted underline;
+    transition: all 0.3s ease-in-out;
+}
+
+body > div.navigation {
+    grid-area: navigation;
+    background-color: var(--C-Black);
+    overflow: scroll;
+}
+
+body > div.preview{
+    height: 100%;
+    width: 100%;
+    grid-area: webpreview;
+    background-color: var(--C-Mint-Cream);
+    }
+body > div.navigation > div.main-nav{
+    height: 40px;
+    border: 1px solid var(--C-Mint-Cream);
+    margin: 10px 0px 40px 10px;
+    border-right: 0px;
+    display: flex;
+    align-items: center;
+    font-family: var(--Font-Fam-3);
+    padding: 0px 0px 0px 30px;
+    border-radius: 25px 0px 0px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    color: var(--C-Mint-Cream);
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        background-color: var(--C-Mint-Cream);
+        color: var(--C-Black);
+    }
+}
+body > div.navigation > div.active {
+    background-color: var(--C-Mint-Cream);
+    border: 0px;
+    color: var(--C-Black);
+}
+body > div.navigation > div.active::before{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    box-shadow: 5px 5px 0px 5px var(--C-Mint-Cream);
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 0px;
+    border-radius: 0px 0px 40px 0px;
+}
+body > div.navigation > div.active::after{
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    box-shadow: 5px -5px 0px 5px var(--C-Mint-Cream);
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    border-radius: 0px 40px 0px 0px;
+}
+body > div.navigation > div.main-nav:first-child{
+    margin-top: 50px;
+}
+
+
+body > div.preview > main#home{
+    display: grid;
+    grid-template-rows: repeat(4, 17%);
+    height: 100%;
+    width: 100%;
+}
+body > div.preview > main#home > div#welcome-box{
+    grid-row: 2;
+    height: max-content;
+    width: max-content;
+    justify-self: center;
+    align-self: flex-end;
+    display: inline;
+}
+body > div.preview > main#home > div.border{
+    border-right: 3px solid orange;
+}
+body > div.preview > main#home > div#welcome-box >h1#welcome-text{
+    font-family: var(--Font-Fam-4);
+}
+body > div.preview > main#home > div#no-preview-box{
+    grid-row: 3;
+    width: max-content;
+    height: max-content;
+    justify-self: center;
+    align-self: flex-end;
+    display: inline;
+}
+body > div.preview > main#home > div#no-preview-box > h2#no-preview-text{
+   font-family: var(--Font-Fam-4);
+   color: red;
+}
+body > div.preview > main#home > div#info-box{
+    grid-row: 4;
+    width: max-content;
+    height: max-content;
+    justify-self: center;
+    align-self: flex-end;
+    display: inline;
+}
+body > div.preview > main#home > div#info-box > h2#info-text{
+   font-family: var(--Font-Fam-4);
+   color: #FF9B71;
+}
+body > div.navigation > div.webs{
+    width: 100%;
+    height: 0px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+body > div.navigation > div.webs >div.web{
+    border: 1px solid var(--C-White);
+    width: 100%;
+    height:max-content;
+    margin: 15px 0px 20px 10%;
+    color: var(--C-White);
+    padding: 2px 0px 4px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px 0px 0px 20px;
+    font-family: var(--Font-Fam-2);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: var(--C-Mint-Cream);
+        color: #5A2328;
+        text-decoration: dashed underline;
+        text-decoration-color: #1A1B41;
+    }
+}
+body > div.navigation > div.webs > div.selected{
+   background-color: var(--C-Mint-Cream);
+   color: #5A2328;
+   text-decoration: dashed underline;
+   text-decoration-color: #1A1B41;
+}
+
+body > div.preview > main#website{
+    width: 100%;
+    height: 100%;
+}
+body > div.preview > main#website > embed.website{
+    width: 100%;
+    height: 100%;
+}
+body > div.preview > main#website > a > button.go-to-live{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    cursor: pointer;
+    background-color: #1A1B41;
+    color: #F1FFE7;
+    font-family: var(--Font-Fam-2);
+    font-size: 14px;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 10px 10px 10px var(--C-Somky-Black);
+    border: 1px solid #BAFF29;
+    &:hover{
+        transform: scale(1.1);
+        background-color: #F1FFE7;
+        color: #1A1B41;
+        border: 2px solid #BAFF29;
+        text-decoration: dotted underline;
+    }
+}
+
+
+body > div.preview > main#contact{
+    padding: 0% 33% 0% 33%;
+}
+body > div.preview > main#contact > h1{
+    margin-top: 100px;
+    color: rgba(0, 0, 0, 0.200);
+    transition: all 0.5s ease-in-out;
+    font-family: var(--Font-Fam-3);
+    text-align: center;
+    text-underline-offset: 15px;
+    text-decoration: overline;
+    text-decoration: overline underline;
+    font-size: 44px;
+}
+body > div.preview > main#contact > div.row{
+    margin: 10px 10px 0px 0px;
+    font-family: var(--Font-Fam-4);
+    text-underline-offset: 10px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    justify-content: start;
+    align-items: center;
+}
+body > div.preview > main#contact > div.row > h2{
+    justify-self: flex-end;
+    display: inline;
+    margin-right: 20px;
+    text-decoration: wavy underline;
+    transform: translateY(30px);
+    color: rgba(0, 0, 0, 0.0);
+    transition: all 0.3s ease-in-out;
+}
+body > div.preview > main#contact > div.row > h3{
+    display: inline;
+    font-size: 26px;
+    text-decoration: solid rgba(0, 0, 0, 0.0) underline;
+    text-decoration-thickness: 3px;
+    font-family: var(--Font-Fam-3);
+    color: rgba(0, 0, 0, 0.0);
+    transform: translateY(30px);
+    transition: all 0.3s ease-in-out;
+}
+body > main#unavalaible{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+

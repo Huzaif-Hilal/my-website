@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Mate+SC&family=Nanum+Pen+Script&family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu">Menu</div>
+    <div class="title">Homepage</div>
+    <div class="navigation">
+        <div class="main-nav active" data-value="Homepage">Home</div>
+        <div class="main-nav" data-value="Choose Website">Websites</div>
+        <div class="webs"> 
+            <div data-value="Socail Profile Links" class="web" data-link="https://social-links-profile-template.netlify.app/">Socail Profile Links</div>
+            <div data-value="Countdown Timer" class="web" data-link="https://countdown-timer-by-huzaif.netlify.app/">Countdwon Timer</div>
+            <div data-value="Task Manager" class="web" data-link="https://task-manager-by-huzaif.netlify.app/">To-do Task Manager</div>
+            <div data-value="Recipe Page" class="web" data-link="https://omelette-recipe-by-huzaif.netlify.app/">Omelette Recipe</div>
+            <div data-value="Rating Component" class="web" data-link="https://interactive-rating-by-huzaif.netlify.app/">Rating Component</div>
+            <div data-value="Faq's Accordian" class="web" data-link="https://faqs-by-huzaif.netlify.app/">Faq's Accordian</div>
+            <div data-value="Blog Card" class="web" data-link="https://blog-card-by-huzaif.netlify.app/">Blog Card</div>
+            <div data-value="Frontend Mentor Qr-Code" class="web" data-link="https://qr-code-frontend-mentor-web.netlify.app/">Qr-Code</div>
+
+        </div>
+        <div class="main-nav" data-value="Contact">Contact</div>
+    </div>
+    <div class="preview">
+        <main id="home" style="display: grid;">
+            <div id="welcome-box"><h1 id="welcome-text"></h1></div>
+            <div id="no-preview-box"><h2 id="no-preview-text"></h2></div>
+            <div id="info-box"><h2 id="info-text"></h2></div>
+        </main>
+
+        <main id="website" style="display: none;">
+            <embed class="website" src=""></embed>
+            <a href="" target="_blank" id="weblink">
+                <button class="go-to-live">Go to Live Website</button>
+            </a>
+        </main>
+
+        <main id="contact" style="display: none;">
+            <h1>Contact</h1>
+            
+
+            <div class="row">
+                <h2 id="email">Email:</h2>
+                <h3 id="emaila">hilalhuxaif5@gmail.com</h3>
+            </div>
+
+            <div class="row">
+                <h2 id="instagram">Instagram:</h2>
+                <h3 id="instagrama">bhat_huzaif_94</h3>
+            </div>
+
+            <div class="row">
+                <h2 id="twitter">Twitter:</h2>
+                <h3 id="twittera">@hilal_huzaif</h3>
+            </div>
+           
+            <div class="row">
+                <h2 id="linkedin">LinkedIn:</h2>
+                <h3 id="linkedina">hilalhuxaif5@gmail.com</h3>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
